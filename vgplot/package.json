@@ -1,0 +1,19 @@
+{
+  "name": "vgplot",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "@uwdata/vgplot": "^0.3.2",
+    "yaml": "^2.3.1"
+  }
+}
