@@ -17,6 +17,7 @@ pip install dbt-duckdb
 Download the incomes & expenditures csv from: https://g0v.hackmd.io/gGGUBDEXQOKGL_feUpPekg
 
 Try running the following commands:
+- dbt seed
 - dbt run
 - dbt test
 
