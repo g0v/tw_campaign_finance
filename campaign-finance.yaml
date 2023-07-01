@@ -1,0 +1,30 @@
+data:
+  transaction: { file: data/corporation_contribution.parquet }
+
+hconcat:
+- vconcat:
+  - input: menu
+    label: Election
+    as: $query
+    from: transaction
+    column: "election_name"
+  - hconcat:
+    - input: search
+      label: Name
+      as: $query
+      from: transaction
+      column: candidate
+      type: contains
+  - input: table
+    from: transaction
+    filterBy: $query
+    height: 500
+    maxWidth: 800
+
+- plot:
+  - mark: barX
+    data: { from: transaction, filterBy: $query }
+    x: { sum: "income_amount" }
+    y: industry_category
+    fill: steelblue
+    sort: { y: -x, limit: 20 }
