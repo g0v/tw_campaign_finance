@@ -3,11 +3,11 @@
 }}
 
 with __corporation_industry as (
-    select * from {{ ref('corporation_industry') }}
+    select * from {{ ref('stg_corporation_industry') }}
 ),
 
 __industry_category as (
-    select * from {{ ref('industry_category') }}
+    select * from {{ ref('stg_industry_category') }}
 ),
 
 corp_industry_category as (
@@ -32,7 +32,7 @@ select
     industry,
     industry_category
 
-from {{ ref('transaction') }}
+from {{ ref('stg_transaction') }}
     left join corp_industry_category on
         who_id = corp_industry_category.id
 
