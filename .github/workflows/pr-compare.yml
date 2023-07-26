@@ -25,7 +25,7 @@ jobs:
         dbt seed
 
     - name: PipeRider Compare
-      uses: InfuseAI/piperider-compare-action@v1
+      uses: InfuseAI/piperider-compare-action@v1.2.0-beta.2
       env:
         PIPERIDER_API_SERVICE: https://staging.cloud.piperider.io
       with:
@@ -33,3 +33,4 @@ jobs:
         cloud_project: ${{ secrets.PIPERIDER_API_PROJECT }}
         upload: true
         share: true
+        piperider_version: v0.29.3-rc.1
