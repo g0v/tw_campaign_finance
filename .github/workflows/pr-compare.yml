@@ -15,6 +15,14 @@ jobs:
       pull-requests: write
     steps:
     - uses: actions/checkout@v3
+    - name: setup and prep data
+      run: |
+        pip install -r requirements.txt
+        dbt deps
+        mkdir data
+        curl -o data/incomes.csv https://lydata.ronny-s3.click/incomes.csv
+        curl -o data/expenditures.csv https://lydata.ronny-s3.click/expenditures.csv
+        dbt seed
 
     - name: PipeRider Compare
       uses: InfuseAI/piperider-compare-action@v1
