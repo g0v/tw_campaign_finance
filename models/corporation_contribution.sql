@@ -32,7 +32,7 @@ select
     industry,
     industry_category
 
-from {{ ref('transaction') }}
+from {{ ref('campaign_transaction') }}
     left join corp_industry_category on
         who_id = corp_industry_category.id
 
