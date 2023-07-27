@@ -1,2 +1,3 @@
-dbt-duckdb
+dbt-core==1.5.3
+dbt-duckdb==1.5.2
 piperider[duckdb]
