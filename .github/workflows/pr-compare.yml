@@ -17,12 +17,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: setup and prep data
       run: |
-        pip install -r requirements.txt
-        dbt deps
         mkdir data
-        curl -o data/incomes.csv https://lydata.ronny-s3.click/incomes.csv
-        curl -o data/expenditures.csv https://lydata.ronny-s3.click/expenditures.csv
-        dbt seed
+        curl -o data/incomes.csv https://tw-campaign-finance.s3.ap-northeast-1.amazonaws.com/incomes.csv
+        curl -o data/expenditures.csv https://tw-campaign-finance.s3.ap-northeast-1.amazonaws.com/expenditures.csv
 
     - name: PipeRider Compare
       uses: InfuseAI/piperider-compare-action@v1

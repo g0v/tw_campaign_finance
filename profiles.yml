@@ -2,7 +2,7 @@ tw_campaign_finance:
   outputs:
     dev:
       type: duckdb
-      path: target/duckdb.db
+      path: tw_campaign_finance.duckdb
       extensions:
         - httpfs
         - parquet
