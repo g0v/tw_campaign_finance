@@ -4,3 +4,11 @@ sources:
       - name: transaction
         meta:
           external_location: "read_csv_auto(['data/incomes.csv', 'data/expenditures.csv'], union_by_name=True, filename=True)"
+  - name: cec
+    tables:
+      - name: candidate
+        meta:
+          external_location: "read_csv_auto(['data/cand.csv'], parallel=false)"
+      - name: vote
+        meta:
+          external_location: "read_csv_auto(['data/vote.csv'])"
