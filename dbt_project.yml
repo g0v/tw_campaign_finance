@@ -34,5 +34,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   tw_campaign_finance:
     # Config indicated by + and applies to all files under models/example/
+    +tags: piperider
     example:
       +materialized: view
