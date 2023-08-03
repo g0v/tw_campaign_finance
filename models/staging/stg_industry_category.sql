@@ -1,0 +1,1 @@
+select * from {{ ref('industry_category') }}
