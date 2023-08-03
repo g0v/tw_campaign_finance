@@ -28,5 +28,6 @@ jobs:
       with:
         cloud_api_token: ${{ secrets.PIPERIDER_CLOUD_TOKEN_ID }}
         cloud_project: ${{ secrets.PIPERIDER_API_PROJECT }}
+        modified: true
         upload: true
         share: true
