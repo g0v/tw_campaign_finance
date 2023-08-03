@@ -24,7 +24,7 @@ hconcat:
 - plot:
   - mark: barX
     data: { from: transaction, filterBy: $query }
-    x: { sum: "income_amount" }
+    x: { sum: "raise_amount" }
     y: industry_category
     fill: steelblue
     sort: { y: -x, limit: 20 }

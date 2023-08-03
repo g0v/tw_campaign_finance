@@ -24,7 +24,7 @@ select
     locality,
     candidate,
     transaction_date,
-    income_amount,
+    raise_amount,
 
     who_id as corp_id, 
     who as name,
