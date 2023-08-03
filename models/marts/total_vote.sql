@@ -1,0 +1,1 @@
+select sum(vote_count) as total_vote, election_name, locality, candidate from {{ ref('stg_vote') }} group by all
